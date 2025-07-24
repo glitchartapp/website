@@ -3,203 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Roadmap Diagram</title>
+    <title>Binary Viewer Roadmap Timeline</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f7f9fa;
             margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 32px 24px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 32px;
+            color: #2d3a4a;
+        }
+        .timeline {
+            border-left: 4px solid #4f8cff;
+            margin-left: 20px;
+            padding-left: 32px;
+        }
+        .phase {
+            margin-bottom: 40px;
+        }
+        .phase-title {
+            font-size: 1.5em;
+            color: #4f8cff;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+        .theme {
+            font-weight: bold;
+            color: #2d3a4a;
+            margin-top: 18px;
+            margin-bottom: 6px;
+        }
+        ul.features {
+            list-style: disc inside;
+            margin: 0 0 0 16px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+            color: #333;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 12px 4px; }
+            .timeline { padding-left: 12px; }
         }
     </style>
 </head>
 <body>
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true });
-    </script>
-    <div class="mermaid">
-        %% Expanded and improved roadmap diagram
-        graph TD
-            %% Legend
-            subgraph "Legend"
-                direction LR
-                L1["<b>🟩 High Impact</b>"]
-                L2["<b>🟨 Medium Impact</b>"]
-                L3["<b>🟥 Low Impact</b>"]
-                L4["<b>⬛ Major Project</b>"]
-                L5["<b>🔧 Technical/Infra</b>"]
-                L6["<b>🌐 Community/Collab</b>"]
-            end
-
-            %% Decision Matrix: Feature Prioritization
-            subgraph "Decision Matrix: Feature Prioritization"
-                direction TB
-
-                %% High Impact
-                subgraph "🟩 High Impact"
-                    direction LR
-                    subgraph "Low Effort (Quick Wins)"
-                        B["Hexadecimal View"]
-                        C["Real-Time Image Preview"]
-                        D["Undo/Redo System"]
-                        I["UI Customization/Theming"]
-                        N["Go-to Offset"]
-                        Q["File-Signature Detection"]
-                        U["Checksum Calculator"]
-                        B1["Inline ASCII Preview"]
-                        B2["Color Coding for Data Types"]
-                        B3["Navigation History"]
-                        B4["Endianness Toggle"]
-                        B5["Bookmarks & Annotations"]
-                        B6["Performance Audit"]
-                    end
-
-                    subgraph "Medium Effort"
-                        A["Virtual Scrolling"]
-                        F["Automated Glitch Effects Panel"]
-                        G["Data Inspector"]
-                        M["Inline Search & Highlight"]
-                        R["Chunk/Section Navigator"]
-                        W["Find & Replace"]
-                        Z["Data Visualization"]
-                        AG["Accessibility (Keyboard Nav/Screen Reader)"]
-                        B7["Structure-Aware Navigation"]
-                        B8["Find Similar Patterns"]
-                        B9["Selection & Brush Tools"]
-                        B10["Effect Modulators"]
-                        B11["Insert/Delete/Resize Operations"]
-                        B12["Patch Scripting"]
-                        B13["Crash-Safe Editing"]
-                        B14["Preset System"]
-                        B15["Export & Share"]
-                        B16["Telemetry Opt-in"]
-                        B17["Structure Templates"]
-                        B18["Visual Template Editor"]
-                        B19["Automatic Structure Detection"]
-                        B20["Visual Structure Explorer"]
-                        B21["Data Type Inference"]
-                        B22["Binary Pattern Recognition"]
-                        B23["Export Structure (C/Python)"]
-                        B24["Checksum Fix-up"]
-                        B25["Decoded Previews (Audio/Video)"]
-                        B26["File Format Templates"]
-                        B27["Template Marketplace Integration"]
-                        B28["Visual Diff Representation"]
-                        B29["Patch Generation/Apply"]
-                        B30["Binary Merge Capabilities"]
-                        B31["Histogram/Entropy Heatmap"]
-                        B32["String Table"]
-                        B33["Fuzzy File-Type Guesser (ML)"]
-                        B34["Pattern Language (Wireshark-style)"]
-                        B35["Steganography Detector"]
-                        B36["VRAM/ROM Tile Viewer"]
-                        B37["Cloud Storage Support"]
-                        B38["Remote File Analysis"]
-                        B39["Automated Backup System"]
-                        B40["Cloud-based Template Sharing"]
-                        B41["Community Annotations"]
-                        B42["Knowledge Base Integration"]
-                        B43["Integration with Binary Analysis Platforms"]
-                        B44["Script Sharing Platform"]
-                        B45["Script Marketplace"]
-                        B46["Interactive Script Debugger"]
-                        B47["Interactive Tutorials"]
-                        B48["Context-Aware Help System"]
-                        B49["Keyboard Shortcut Customization"]
-                        B50["Memory Efficiency Improvements"]
-                        B51["Multi-threaded Analysis Support"]
-                        B52["WebAssembly Integration"]
-                    end
-
-                    subgraph "High Effort (Major Projects)"
-                        S["Decoded Previews (Audio/Video)"]
-                        V["Binary Diff View"]
-                        AC["Extension API"]
-                        AD["Web Extension Port (vscode.dev)"]
-                        AE["Large-File Streaming"]
-                        AF["Security Sandboxing"]
-                        AG2["Disassembly View Integration"]
-                        AG3["Control Flow Graph Visualization"]
-                        AG4["Cross-Reference Analysis"]
-                        AG5["Function Recognition"]
-                        AG6["Code Annotation System"]
-                        AG7["Memory Dump Analysis"]
-                        AG8["Heap/Stack Analysis"]
-                        AG9["Memory Pattern Detection"]
-                        AG10["Timeline View of Memory Changes"]
-                        AG11["Vulnerability Pattern Detection"]
-                        AG12["Entropy Analysis"]
-                        AG13["Malware Pattern Recognition"]
-                        AG14["Security Report Generation"]
-                        AG15["Reverse Engineering Tools"]
-                        AG16["Memory Analysis Features"]
-                        AG17["Scripting API"]
-                        AG18["Python Scripting Interface"]
-                        AG19["Automation Support"]
-                        AG20["Interactive Script Debugger"]
-                        AG21["Script Marketplace"]
-                        AG22["Cloud Integration"]
-                        AG23["Binary Analysis Pipeline Integration"]
-                        AG24["Community Features"]
-                        AG25["Template Marketplace"]
-                        AG26["Visual Template Editor"]
-                        AG27["Visual Structure Explorer"]
-                        AG28["Export Structure to C/Python"]
-                        AG29["Visual Diff Representation"]
-                        AG30["Patch Generation/Apply"]
-                        AG31["Binary Merge Capabilities"]
-                        AG32["Plugin Marketplace Category"]
-                        AG33["Language Server Protocol (LSP) Bridge"]
-                        AG34["Remote Development Compatibility"]
-                        AG35["Enterprise Telemetry Hooks"]
-                        AG36["Live Share Support"]
-                        AG37["Session Recording/Playback"]
-                        AG38["Chat Integration"]
-                        AG39["Real-Time Cursor Sharing"]
-                        AG40["Collaborative Annotations"]
-                        AG41["Shared Binary Editing Sessions"]
-                        AG42["Collaboration Mode"]
-                        AG43["Internationalisation (i18n)"]
-                        AG44["Accessibility Improvements"]
-                        AG45["Cloud-Based Template Sharing"]
-                        AG46["Glitch Recipe Sharing/Community Hub"]
-                    end
-                end
-
-                %% Medium Impact
-                subgraph "🟨 Medium Impact"
-                    direction LR
-                    subgraph "Low Effort"
-                        H["Bookmarks & Annotations"]
-                        K["Export & Share"]
-                        P["Telemetry Opt-in"]
-                    end
-                    subgraph "Medium Effort"
-                        E["Selection & Brush Tools"]
-                        J["Preset System"]
-                        T["Structure Templates"]
-                        X["Insert/Delete/Resize Operations"]
-                        Y["Patch Scripting"]
-                        AA["Checksum Fix-up"]
-                        AB["Crash-Safe Editing"]
-                        AH["Internationalisation (i18n)"]
-                        AI["Collaboration Mode"]
-                    end
-                end
-
-                %% Low Impact
-                subgraph "🟥 Low Impact"
-                    direction LR
-                    subgraph "High Effort (Reconsider)"
-                        L["Scripting API"]
-                        AF2["Security Sandboxing"]
-                    end
-                end
-            end
+    <div class="container">
+        <h1>Binary Viewer Roadmap</h1>
+        <div class="timeline">
+            <div class="phase">
+                <div class="phase-title">Phase 1: Foundation & Core Usability</div>
+                <div class="theme">Core Editing</div>
+                <ul class="features">
+                    <li>Hexadecimal View (hex + ASCII gutter)</li>
+                    <li>Virtual Scrolling (windowing for large files)</li>
+                    <li>Real-Time Image Preview</li>
+                    <li>Undo/Redo System</li>
+                    <li>Go-to Offset</li>
+                    <li>Inline ASCII Preview</li>
+                    <li>Color Coding for Data Types</li>
+                    <li>Navigation History</li>
+                    <li>Endianness Toggle</li>
+                    <li>Bookmarks & Annotations</li>
+                    <li>Performance Audit</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <div class="phase-title">Phase 2: Advanced Analysis & Creative Tools</div>
+                <div class="theme">Analysis & Structure</div>
+                <ul class="features">
+                    <li>File-Signature Detection</li>
+                    <li>Chunk/Section Navigator</li>
+                    <li>Structure Templates & Visual Editor</li>
+                    <li>Automatic Structure Detection</li>
+                    <li>Visual Structure Explorer</li>
+                    <li>Data Type Inference</li>
+                    <li>Binary Pattern Recognition</li>
+                    <li>Export Structure (C/Python)</li>
+                    <li>Find Similar Patterns</li>
+                    <li>Data Inspector</li>
+                    <li>Inline Search & Highlight</li>
+                    <li>Find & Replace</li>
+                    <li>Data Visualization (histogram, entropy heatmap, string table)</li>
+                    <li>Checksum Calculator & Fix-up</li>
+                    <li>Crash-Safe Editing</li>
+                </ul>
+                <div class="theme">Glitch Art & Creative</div>
+                <ul class="features">
+                    <li>Selection & Brush Tools</li>
+                    <li>Automated Glitch Effects Panel</li>
+                    <li>Effect Modulators (sliders/inputs)</li>
+                    <li>Preset System</li>
+                    <li>Export & Share (files, glitch recipes)</li>
+                    <li>Patch Scripting (record/edit/export patches)</li>
+                    <li>Insert/Delete/Resize Operations</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <div class="phase-title">Phase 3: Professional & Power User Features</div>
+                <div class="theme">Diff, Scripting, & Reverse Engineering</div>
+                <ul class="features">
+                    <li>Binary Diff View (side-by-side, visual diff, patch gen/apply, merge)</li>
+                    <li>Decoded Previews (audio, video, font, etc.)</li>
+                    <li>Scripting API (JavaScript, Python)</li>
+                    <li>Script Marketplace & Sharing Platform</li>
+                    <li>Interactive Script Debugger</li>
+                    <li>Disassembly View Integration</li>
+                    <li>Control Flow Graph Visualization</li>
+                    <li>Cross-Reference Analysis</li>
+                    <li>Function Recognition</li>
+                    <li>Code Annotation System</li>
+                    <li>Memory Dump/Heap/Stack Analysis</li>
+                    <li>Memory Pattern Detection</li>
+                    <li>Timeline View of Memory Changes</li>
+                    <li>Vulnerability Pattern Detection</li>
+                    <li>Entropy Analysis</li>
+                    <li>Malware Pattern Recognition</li>
+                    <li>Security Report Generation</li>
+                    <li>Reverse Engineering Tools</li>
+                    <li>Memory Analysis Features</li>
+                </ul>
+                <div class="theme">Performance & Extensibility</div>
+                <ul class="features">
+                    <li>Large-File Streaming</li>
+                    <li>WebAssembly Integration</li>
+                    <li>Memory Efficiency Improvements</li>
+                    <li>Multi-threaded Analysis Support</li>
+                    <li>Extension API</li>
+                    <li>Web Extension Port (vscode.dev)</li>
+                    <li>Plugin Marketplace Category</li>
+                    <li>Language Server Protocol (LSP) Bridge</li>
+                    <li>Remote Development Compatibility</li>
+                    <li>Enterprise Telemetry Hooks</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <div class="phase-title">Phase 4: Community, Collaboration & Accessibility</div>
+                <div class="theme">Collaboration & Cloud</div>
+                <ul class="features">
+                    <li>Collaboration Mode (Live Share, shared editing, real-time cursor, chat, session recording)</li>
+                    <li>Cloud Storage & Integration</li>
+                    <li>Remote File Analysis</li>
+                    <li>Automated Backup System</li>
+                    <li>Cloud-based Template Sharing</li>
+                    <li>Community Features (annotations, knowledge base, integration with analysis platforms)</li>
+                    <li>Glitch Recipe Sharing/Community Hub</li>
+                </ul>
+                <div class="theme">Accessibility & Internationalisation</div>
+                <ul class="features">
+                    <li>Accessibility Improvements (keyboard nav, screen reader, high-contrast)</li>
+                    <li>Internationalisation (i18n)</li>
+                    <li>Interactive Tutorials</li>
+                    <li>Context-Aware Help System</li>
+                    <li>Keyboard Shortcut Customization</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <div class="phase-title">Backlog / Nice-to-Have Ideas</div>
+                <ul class="features">
+                    <li>Fuzzy File-Type Guesser (ML)</li>
+                    <li>Pattern Language (Wireshark-style)</li>
+                    <li>Steganography Detector</li>
+                    <li>VRAM/ROM Tile Viewer</li>
+                    <li>Security Sandboxing</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html> 
