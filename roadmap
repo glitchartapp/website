@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Roadmap Diagram</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <div class="mermaid">
+        %% Expanded and improved roadmap diagram
+        graph TD
+            %% Legend
+            subgraph "Legend"
+                direction LR
+                L1["<b>🟩 High Impact</b>"]
+                L2["<b>🟨 Medium Impact</b>"]
+                L3["<b>🟥 Low Impact</b>"]
+                L4["<b>⬛ Major Project</b>"]
+                L5["<b>🔧 Technical/Infra</b>"]
+                L6["<b>🌐 Community/Collab</b>"]
+            end
+
+            %% Decision Matrix: Feature Prioritization
+            subgraph "Decision Matrix: Feature Prioritization"
+                direction TB
+
+                %% High Impact
+                subgraph "🟩 High Impact"
+                    direction LR
+                    subgraph "Low Effort (Quick Wins)"
+                        B["Hexadecimal View"]
+                        C["Real-Time Image Preview"]
+                        D["Undo/Redo System"]
+                        I["UI Customization/Theming"]
+                        N["Go-to Offset"]
+                        Q["File-Signature Detection"]
+                        U["Checksum Calculator"]
+                        B1["Inline ASCII Preview"]
+                        B2["Color Coding for Data Types"]
+                        B3["Navigation History"]
+                        B4["Endianness Toggle"]
+                        B5["Bookmarks & Annotations"]
+                        B6["Performance Audit"]
+                    end
+
+                    subgraph "Medium Effort"
+                        A["Virtual Scrolling"]
+                        F["Automated Glitch Effects Panel"]
+                        G["Data Inspector"]
+                        M["Inline Search & Highlight"]
+                        R["Chunk/Section Navigator"]
+                        W["Find & Replace"]
+                        Z["Data Visualization"]
+                        AG["Accessibility (Keyboard Nav/Screen Reader)"]
+                        B7["Structure-Aware Navigation"]
+                        B8["Find Similar Patterns"]
+                        B9["Selection & Brush Tools"]
+                        B10["Effect Modulators"]
+                        B11["Insert/Delete/Resize Operations"]
+                        B12["Patch Scripting"]
+                        B13["Crash-Safe Editing"]
+                        B14["Preset System"]
+                        B15["Export & Share"]
+                        B16["Telemetry Opt-in"]
+                        B17["Structure Templates"]
+                        B18["Visual Template Editor"]
+                        B19["Automatic Structure Detection"]
+                        B20["Visual Structure Explorer"]
+                        B21["Data Type Inference"]
+                        B22["Binary Pattern Recognition"]
+                        B23["Export Structure (C/Python)"]
+                        B24["Checksum Fix-up"]
+                        B25["Decoded Previews (Audio/Video)"]
+                        B26["File Format Templates"]
+                        B27["Template Marketplace Integration"]
+                        B28["Visual Diff Representation"]
+                        B29["Patch Generation/Apply"]
+                        B30["Binary Merge Capabilities"]
+                        B31["Histogram/Entropy Heatmap"]
+                        B32["String Table"]
+                        B33["Fuzzy File-Type Guesser (ML)"]
+                        B34["Pattern Language (Wireshark-style)"]
+                        B35["Steganography Detector"]
+                        B36["VRAM/ROM Tile Viewer"]
+                        B37["Cloud Storage Support"]
+                        B38["Remote File Analysis"]
+                        B39["Automated Backup System"]
+                        B40["Cloud-based Template Sharing"]
+                        B41["Community Annotations"]
+                        B42["Knowledge Base Integration"]
+                        B43["Integration with Binary Analysis Platforms"]
+                        B44["Script Sharing Platform"]
+                        B45["Script Marketplace"]
+                        B46["Interactive Script Debugger"]
+                        B47["Interactive Tutorials"]
+                        B48["Context-Aware Help System"]
+                        B49["Keyboard Shortcut Customization"]
+                        B50["Memory Efficiency Improvements"]
+                        B51["Multi-threaded Analysis Support"]
+                        B52["WebAssembly Integration"]
+                    end
+
+                    subgraph "High Effort (Major Projects)"
+                        S["Decoded Previews (Audio/Video)"]
+                        V["Binary Diff View"]
+                        AC["Extension API"]
+                        AD["Web Extension Port (vscode.dev)"]
+                        AE["Large-File Streaming"]
+                        AF["Security Sandboxing"]
+                        AG2["Disassembly View Integration"]
+                        AG3["Control Flow Graph Visualization"]
+                        AG4["Cross-Reference Analysis"]
+                        AG5["Function Recognition"]
+                        AG6["Code Annotation System"]
+                        AG7["Memory Dump Analysis"]
+                        AG8["Heap/Stack Analysis"]
+                        AG9["Memory Pattern Detection"]
+                        AG10["Timeline View of Memory Changes"]
+                        AG11["Vulnerability Pattern Detection"]
+                        AG12["Entropy Analysis"]
+                        AG13["Malware Pattern Recognition"]
+                        AG14["Security Report Generation"]
+                        AG15["Reverse Engineering Tools"]
+                        AG16["Memory Analysis Features"]
+                        AG17["Scripting API"]
+                        AG18["Python Scripting Interface"]
+                        AG19["Automation Support"]
+                        AG20["Interactive Script Debugger"]
+                        AG21["Script Marketplace"]
+                        AG22["Cloud Integration"]
+                        AG23["Binary Analysis Pipeline Integration"]
+                        AG24["Community Features"]
+                        AG25["Template Marketplace"]
+                        AG26["Visual Template Editor"]
+                        AG27["Visual Structure Explorer"]
+                        AG28["Export Structure to C/Python"]
+                        AG29["Visual Diff Representation"]
+                        AG30["Patch Generation/Apply"]
+                        AG31["Binary Merge Capabilities"]
+                        AG32["Plugin Marketplace Category"]
+                        AG33["Language Server Protocol (LSP) Bridge"]
+                        AG34["Remote Development Compatibility"]
+                        AG35["Enterprise Telemetry Hooks"]
+                        AG36["Live Share Support"]
+                        AG37["Session Recording/Playback"]
+                        AG38["Chat Integration"]
+                        AG39["Real-Time Cursor Sharing"]
+                        AG40["Collaborative Annotations"]
+                        AG41["Shared Binary Editing Sessions"]
+                        AG42["Collaboration Mode"]
+                        AG43["Internationalisation (i18n)"]
+                        AG44["Accessibility Improvements"]
+                        AG45["Cloud-Based Template Sharing"]
+                        AG46["Glitch Recipe Sharing/Community Hub"]
+                    end
+                end
+
+                %% Medium Impact
+                subgraph "🟨 Medium Impact"
+                    direction LR
+                    subgraph "Low Effort"
+                        H["Bookmarks & Annotations"]
+                        K["Export & Share"]
+                        P["Telemetry Opt-in"]
+                    end
+                    subgraph "Medium Effort"
+                        E["Selection & Brush Tools"]
+                        J["Preset System"]
+                        T["Structure Templates"]
+                        X["Insert/Delete/Resize Operations"]
+                        Y["Patch Scripting"]
+                        AA["Checksum Fix-up"]
+                        AB["Crash-Safe Editing"]
+                        AH["Internationalisation (i18n)"]
+                        AI["Collaboration Mode"]
+                    end
+                end
+
+                %% Low Impact
+                subgraph "🟥 Low Impact"
+                    direction LR
+                    subgraph "High Effort (Reconsider)"
+                        L["Scripting API"]
+                        AF2["Security Sandboxing"]
+                    end
+                end
+            end
+    </div>
+</body>
+</html> 
