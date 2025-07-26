@@ -12,7 +12,7 @@
             padding: 0;
         }
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 40px auto;
             background: #fff;
             border-radius: 12px;
@@ -24,8 +24,20 @@
             margin-bottom: 32px;
             color: #2d3a4a;
         }
+        .section-header {
+            font-size: 2em;
+            color: #2d3a4a;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4f8cff;
+        }
         .timeline {
             border-left: 4px solid #4f8cff;
+            margin-left: 20px;
+            padding-left: 32px;
+        }
+        .extension-timeline {
+            border-left: 4px solid #ff6b4a;
             margin-left: 20px;
             padding-left: 32px;
         }
@@ -35,6 +47,12 @@
         .phase-title {
             font-size: 1.5em;
             color: #4f8cff;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+        .extension-phase-title {
+            font-size: 1.5em;
+            color: #ff6b4a;
             margin-bottom: 8px;
             margin-top: 0;
         }
@@ -57,15 +75,22 @@
             color: #28a745;
             font-weight: 500;
         }
+        .extension-completed {
+            color: #28a745;
+            font-weight: 500;
+        }
         @media (max-width: 600px) {
             .container { padding: 12px 4px; }
-            .timeline { padding-left: 12px; }
+            .timeline, .extension-timeline { padding-left: 12px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Binary Viewer Roadmap</h1>
+        
+        <!-- Core Project Features -->
+        <h2 class="section-header">Core Binary Viewer Application</h2>
         <div class="timeline">
             <div class="phase">
                 <div class="phase-title">Phase 1: Foundation & Core Usability</div>
@@ -175,14 +200,6 @@
                     <li>Remote Development Compatibility</li>
                     <li>Enterprise Telemetry Hooks</li>
                 </ul>
-                <div class="theme">VS Code Integration</div>
-                <ul class="features">
-                    <li class="completed">✅ Custom Editor Provider</li>
-                    <li class="completed">✅ VS Code Extension Framework</li>
-                    <li class="completed">✅ Webview Integration</li>
-                    <li class="completed">✅ File Association & Context Menu</li>
-                    <li class="completed">✅ Extension Packaging & Distribution</li>
-                </ul>
             </div>
             <div class="phase">
                 <div class="phase-title">Phase 4: Community, Collaboration & Accessibility</div>
@@ -213,6 +230,48 @@
                     <li>Steganography Detector</li>
                     <li>VRAM/ROM Tile Viewer</li>
                     <li>Security Sandboxing</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- VS Code Extension Features -->
+        <h2 class="section-header">VS Code Extension Features</h2>
+        <div class="extension-timeline">
+            <div class="phase">
+                <div class="extension-phase-title">Phase 1: Core Extension Integration</div>
+                <div class="theme">VS Code Integration</div>
+                <ul class="features">
+                    <li class="extension-completed">✅ Custom Editor Provider</li>
+                    <li class="extension-completed">✅ VS Code Extension Framework</li>
+                    <li class="extension-completed">✅ Webview Integration</li>
+                    <li class="extension-completed">✅ File Association & Context Menu</li>
+                    <li class="extension-completed">✅ Extension Packaging & Distribution</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <div class="extension-phase-title">Phase 2: Advanced Extension Features</div>
+                <div class="theme">Extension-Specific Features</div>
+                <ul class="features">
+                    <li>Command Palette Integration</li>
+                    <li>Status Bar Integration</li>
+                    <li>Sidebar Panel Integration</li>
+                    <li>Multi-workspace Support</li>
+                    <li>Extension Settings & Configuration</li>
+                    <li>Extension Telemetry & Analytics</li>
+                    <li>Extension Marketplace Optimization</li>
+                    <li>Extension Documentation & Help</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <div class="extension-phase-title">Phase 3: Extension Ecosystem</div>
+                <div class="theme">Extension Development</div>
+                <ul class="features">
+                    <li>Extension API for Third-party Plugins</li>
+                    <li>Extension Contribution Points</li>
+                    <li>Extension Testing Framework</li>
+                    <li>Extension Debugging Tools</li>
+                    <li>Extension Performance Monitoring</li>
+                    <li>Extension Security Sandboxing</li>
                 </ul>
             </div>
         </div>
