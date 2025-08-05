@@ -383,7 +383,7 @@
             <p class="subtitle">Transform any file into glitch art by editing at the binary level. Perfect for artists, designers, and creative professionals.</p>
             
             <div class="cta-buttons">
-                <a href="#" class="btn btn-primary" id="marketplace-link">Install from Marketplace</a>
+                <a href="https://marketplace.visualstudio.com/items?itemName=glitchartapp.binary-art-editor" class="btn btn-primary" target="_blank">Install from Marketplace</a>
                 <a href="https://glitchartapp.com" class="btn btn-secondary">View Website</a>
             </div>
         </header>
@@ -444,11 +444,11 @@
             <div class="install-steps">
                 <div class="install-step">
                     <h3>1. From VS Code Marketplace</h3>
-                    <p>Search for "Binary Glitch Art Editor" in the VS Code extensions panel and click install.</p>
+                    <p>Search for "Binary Glitch Art Editor" in the VS Code extensions panel and click install, or use the <a href="https://marketplace.visualstudio.com/items?itemName=glitchartapp.binary-art-editor" target="_blank" style="color: #00ffff;">direct link</a>.</p>
                 </div>
                 <div class="install-step">
                     <h3>2. From Command Line</h3>
-                    <div class="code-block">code --install-extension glitchartapp.binary-viewer</div>
+                    <div class="code-block">code --install-extension glitchartapp.binary-art-editor</div>
                 </div>
                 <div class="install-step">
                     <h3>3. Manual Installation</h3>
@@ -471,27 +471,13 @@
                 <a href="https://glitchartapp.com">Website</a>
                 <a href="mailto:support@glitchartapp.com">Support</a>
                 <a href="https://glitchartapp.com/license">License</a>
-                <a href="#" id="marketplace-footer">VS Code Marketplace</a>
+                <a href="https://marketplace.visualstudio.com/items?itemName=glitchartapp.binary-art-editor" target="_blank">VS Code Marketplace</a>
             </div>
             <p>&copy; 2025 Binary Glitch Art Editor. Open source under MIT License.</p>
         </div>
     </footer>
 
     <script>
-        // Update marketplace links when extension is published
-                    const marketplaceUrl = 'https://marketplace.visualstudio.com/items?itemName=glitchartapp.binary-viewer';
-        
-        // For now, show coming soon message
-        document.getElementById('marketplace-link').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Extension will be available on VS Code Marketplace soon! For now, please install from GitHub.');
-        });
-        
-        document.getElementById('marketplace-footer').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Extension will be available on VS Code Marketplace soon! For now, please install from GitHub.');
-        });
-
         // Add some interactive glitch effects
         document.addEventListener('DOMContentLoaded', function() {
             const title = document.querySelector('.glitch-title');
